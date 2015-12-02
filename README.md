@@ -178,3 +178,5 @@ Test your app. Refer to tests for [Playlister CLI](https://github.com/flatiron-s
 * [About Bundler](http://bundler.io/)
 * [RSpec Docs](https://www.relishapp.com/rspec)
 * [Playlister CLI](https://github.com/flatiron-school-ironboard/playlister-cli-bk-002)
+
+<a href='https://learn.co/lessons/cli-project-week-guidelines' data-visibility='hidden'>View this lesson on Learn.co</a>
