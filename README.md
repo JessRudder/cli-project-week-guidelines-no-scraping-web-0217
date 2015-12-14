@@ -16,11 +16,6 @@ This readme is organized into eight sections:
 
 ## Guidelines
 
-1. Groups
- * You may work alone or in pairs. The max group size is two.
-2. Timeline
-  * You will have three days of class to complete this project. 
-  * Your app must have basic functionality by the early afternoon on Wednesday the 25th as you will be presenting it to the class around 4pm.
 3. Approval
   * Before starting on your project, you must get your idea approved by an instructor.
 4. Design
