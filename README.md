@@ -174,4 +174,4 @@ Test your app. Refer to tests for [Playlister CLI](https://github.com/flatiron-s
 * [RSpec Docs](https://www.relishapp.com/rspec)
 * [Playlister CLI](https://github.com/flatiron-school-ironboard/playlister-cli-bk-002)
 
-<a href='https://learn.co/lessons/cli-project-week-guidelines' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/cli-project-week-guidelines' title='Project Week 1'>Project Week 1</a> on Learn.co and start learning to code for free.</p>
