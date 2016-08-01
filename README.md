@@ -21,7 +21,7 @@ This readme is organized into eight sections:
 4. Design
   * Your app using object oriented programming techniques
 5. Components
-  * Your app must fetch data from the internet by making API calls or scraping
+  * Your app must fetch data from the internet by making API calls
   * Your app must be have an interactive command line interface or CLI
 
 ## Requirements
@@ -36,8 +36,7 @@ Your app should have at least three classes:
   * The CLI should also respond to at least two more keywords of your choosing (these will probably vary depending on the purpose of your app, some might be "start", "search", etc.).
 2. Data Fetcher
   * The second class should fetch data and it will be in the `app/data_fetchers` folder
-  * This could be a [Nokogiri scraper](), in which case you should name it something like BuzzFeedScraper, `app/data_fetchers/buzzfeed_scraper.rb`
-  * It could also make API calls, in which case you should name it something like BuzzFeedAPICaller, `app/data_fetchers/buzzfeed_api_caller.rb`
+  * It could be an API calls, in which case you should name it something like BuzzFeedAPICaller, `app/data_fetchers/buzzfeed_api_caller.rb`
     * If you would like help from instructors when creating the class that makes API calls, the API you select must not require authentication (that means no Twitter, no Facebook, no Instagram, etc.). You can use APIs that do require authentication as long as you're comfortable knowning that instructors will not help you debug them.
   * Finally, it could also be a data parser. You could download CSV files, JSON, spreadsheets, etc. from the internet, add them to a  `lib` folder you will create, and have your data parser parse through the files and instantiate new instances of your model class or classes.
   * Note about data fetchers: They must instantiate new instances of your model class or classes.
@@ -59,20 +58,6 @@ These are all suggestions to get your mind churning. By no means are you limited
 * [NYC Open Data](https://nycopendata.socrata.com/)
 * [US Open Data](http://www.data.gov/open-gov/)
 * [Bachelor Contestants](https://raw.githubusercontent.com/kthffmn/bachelor-contestants/master/data.json)
-
-### Scraping
-
-Here are some popular websites you can scrape
-
-* [BuzzFeed](http://www.buzzfeed.com/)
-* Twitter Searches - For instance, searched for hello: [https://twitter.com/search?f=realtime&q=hello&src=typd](https://twitter.com/search?f=realtime&q=hello&src=typd)
-  * Format: `"https://twitter.com/search?f=realtime&q=" + search_term + "&src=typd"`
-* [Gawker](http://gawker.com/)
-* [The Huffington Post](http://www.huffingtonpost.com/)
-* [Imgur](http://imgur.com/)
-* [New York Times](http://www.nytimes.com/)
-* [Wired](http://www.wired.com/)
-* [ValleyWag](http://valleywag.gawker.com/)
 
 ### APIs  
 
@@ -123,8 +108,7 @@ Here are some popular websites you can scrape
 │   ├── concerns
 │   │   └── example_module.rb
 │   ├── data_fetchers
-│   │   ├── example_api_caller.rb
-│   │   └── example_scraper.rb
+│   │   └── example_api_caller.rb
 │   ├── models
 │   │   └── example_model.rb
 │   └── runners
@@ -142,17 +126,17 @@ Here are some popular websites you can scrape
 
 * Think about what your model(s) will look like.
 * Start replacing the example code with your own code *in this order*:
-  * See what kind of data you can get from your API calls or your scraper and start to build it out
+  * See what kind of data you can get from your API calls and start to build it out
   * Given this data, make your model(s)
-  * Have your data fetcher (either API caller or scraper) instantiate new instances of your model(s)
-  * Once you have a functional API caller/scraper, start working on your CLI class in `app/runners/example_cli.rb`
+  * Have your data fetcher instantiate new instances of your model(s)
+  * Once you have a functional API caller, start working on your CLI class in `app/runners/example_cli.rb`
   * Update `bin/run.rb` so that it calls on your CLI class correctly. You should be able to run `ruby bin/run.rb` from your terminal to interact with your app.
   * Once your CLI is functional, replace this readme with instructions on how to use your app.
   * If you have time, start testing your app (see the bonus section).
 
 ## Adding Gems
 
-This lab manages gems using [Bundler](http://bundler.io/). This means that instead of writing "require `name-of-gem'` at the top of your files, you're going to add that gem to the Gemfile, for instance `gem "nokogiri"`, then run `bundle install` again. The file `config/environment.rb` requires all these gems, then loads your modules, then your models, then your scrapers/API callers, then your CLI runner. Then it requires the "json" and "open-uri" modules.
+This lab manages gems using [Bundler](http://bundler.io/). This means that instead of writing "require `name-of-gem'` at the top of your files, you're going to add that gem to the Gemfile, for instance `gem "rspec"`, then run `bundle install` again. The file `config/environment.rb` requires all these gems, then loads your modules, then your models, then your API callers, then your CLI runner. Then it requires the "json" and "open-uri" modules.
 
 ## Testing Your Code
 
